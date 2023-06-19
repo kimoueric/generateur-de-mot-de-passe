@@ -1,46 +1,44 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
-  background-color:rgb(105, 174, 253) ;
-  display:  flex;
+body {
+  background-color: rgb(105, 174, 253);
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
 }
 
-
-.check{
+.check {
   height: 45px;
   width: 45px;
   cursor: pointer;
 }
 
-.check:checked{
-  transform: scale(0.8 , 0.8);
+.check:checked {
+  transform: scale(0.8, 0.8);
   background-color: rgb(105, 174, 253);
   transition: 0.3s;
-  
 }
 
-.check:not(.check:checked){
-  transform: scale(1 , 1);
+.check:not(.check:checked) {
+  transform: scale(1, 1);
   transition: 0.3s;
 }
 
-.moveit{
-animation: move 0.6s infinite;
+h6 {
+  font-size: 13px;
+}
 
+.moveit {
+  animation: move 0.6s infinite;
 }
 
 @keyframes move {
-  from{
+  from {
     transform: translateX(-5px);
     padding: 10px;
     box-shadow: 0px 1px 5px 0px red;
-
-
   }
 }

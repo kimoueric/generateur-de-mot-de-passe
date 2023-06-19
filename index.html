@@ -1,59 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/style.css">
-  <title>VanillaJs</title>
-</head>
-<body>
-  <div class="container-fluid d-flex justify-content-center flex-column  align-items-center  w-75  ">
-    
-    <div class="alert alert-primary w-100 text-center  ">
-      <h5>Générateur de mot de passe</h5>
-    </div>
-    <form action="" class=" form d-flex flex-column bg-light w-100 p-5 rounded">
-      <div class=" d-flex justify-content-center">
-
-        <input type="text" name=""  id="displayMdp" class="form-control w-75 mx-3 p-2 text-center "  readonly >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>VanillaJs</title>
+  </head>
+  <body>
+    <div
+      class="container-sm d-flex justify-content-center flex-column align-items-center w-50"
+    >
+      <div class="alert alert-primary w-100 text-center">
+        <h5>Générateur de mot de passe</h5>
       </div>
-      <div class="d-flex mt-3  d-flex justify-content-center mx-4 ">
+      <form action="" class="form bg-light w-100 p-5 rounded">
+        <div class="d-flex justify-content-center">
+          <input
+            type="text"
+            name=""
+            id="displayMdp"
+            class="form-control w-75 mx-3 p-2 text-center"
+            readonly
+          />
+        </div>
+        <div class="d-flex mt-3 d-flex justify-content-center mx-4">
+          <input
+            type="range"
+            name=""
+            class="mx-3"
+            id="taille"
+            min="0"
+            max="24"
+            value="0"
+          /><span id="recuptaille">00</span>
+        </div>
+        <div class="container-sm mt-4">
+          <div class="row">
+            <div class="col-sm-3">
+              <input
+                type="checkbox"
+                name=""
+                id="minuscule"
+                class="check form-control mx-3"
+              />
+              <div class="container-sm">
+                <h6>a-z</h6>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <input
+                type="checkbox"
+                name=""
+                id="majuscule"
+                class="check form-control mx-3"
+              />
+              <div class="container-sm">
+                <h6>A-Z</h6>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <input
+                type="checkbox"
+                name=""
+                id="numerique"
+                class="check form-control mx-3"
+              />
+              <div class="container-sm">
+                <h6>0-9</h6>
+              </div>
+            </div>
 
-        <input type="range" name="" class="mx-3 " id="taille" min="0"  max="24" value = "0"><span id="recuptaille">00</span>
-      </div>
-      <div class="d-flex mt-3  d-flex justify-content-center cricteresContainer">
-
-        <div class=" mx-4 ">
-
-          <input type="checkbox" name="" id="minuscule" class="check form-control mx-3">
-          <h6 class="mx-4">a-z</h6>
-          
+            <div class="col-sm-3">
+              <input
+                type="checkbox"
+                name=""
+                id="symbole"
+                class="check form-control mx-3"
+              />
+              <div class="container-sm">
+                <h6>!-?</h6>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          
-          <input type="checkbox" name="" id="majuscule" class="check form-control mx-3">
-          <h6 class="mx-4">A-Z</h6>
+        <div class="mt-5 d-flex justify-content-center">
+          <button class="btn btn-primary" id="btnGeneration">
+            Générer le mot de passe
+          </button>
         </div>
-        <div class="mx-4 ">
-          
-          <input type="checkbox" name="" id="numerique" class="check form-control mx-3">
-          <h6 class="mx-4">0-9</h6>
-        </div>
-        
-        <div class="mx-4 ">
-          
-          <input type="checkbox" name="" id="symbole" class="check form-control  mx-2">
-          <h6 class="mx-4">!-?</h6>
-        </div>
-        
-    
-      </div>
-      <div class="mt-5 d-flex justify-content-center">
-        <button class="btn btn-primary" id="btnGeneration">Générer le mot de passe</button>
-      </div>
       </form>
-  </div>
-</body>
-<script src="./assets/app.js"></script>
+    </div>
+  </body>
+  <script src="./assets/app.js"></script>
 </html>
